@@ -266,6 +266,7 @@ class BlockHandler
         $sanitizer->set('AutoFormat.RemoveEmpty', true);
         $sanitizer->set('HTML.DefinitionID', 'html5-definitions');
         $sanitizer->set('Attr.AllowedRel', ['nofollow', 'noopener', 'sponsored', 'bookmark']);
+        $sanitizer->set('Attr.AllowedFrameTargets', ['_blank', '_self']);
 
         $cacheDirectory = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'purifier';
         if (!is_dir($cacheDirectory)) {
